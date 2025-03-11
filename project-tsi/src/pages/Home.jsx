@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
-import Button from '../components/Button';
+import {Container} from '../components/Container';
+import {Button} from '../components/Button';
 
-class Home extends Component {
+export default class Home extends Component {
     render(){
         return(
-            <Container>
+           <Container>
                     <h2>Home</h2>
-                    <Button type="primary" size="large" title = "Подтвердить"/>
-                    <Button type="secondary" size="medium" title = "Удалить"/>
-                    <div className="w-full h-full flex items-center justify-center bg-red-500 text-lg">HEllo</div> 
+                    <div className = "flex gap-4"></div>
+                    <Button color="primary" size="large" title = "Подтвердить"/>
+                    <Button color="secondary" size="medium" title = "Удалить"/>
+                    <div className="w-full h-full bg- flex items-center justify-center">HEllo</div> 
+                    
             </Container>
             
         );
     }
 }
-
-export default Home

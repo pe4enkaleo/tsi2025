@@ -1,9 +1,32 @@
-import React from 'react'
+import React from 'react';
 
-const Button = (props) => {
+export const Button = (props) => {
     const {size, color, title} = props;
     const defaultClass = "flex items-center rounded-2 h-[40px] w-[max-content] px-4 py-2";
-    return <div className = {defaultClass + " " + classes.sizes[size] + " "}>Button</div>;
-}
+    const classes = {
+        colors: {
+            primary: {
+                button: "bg-amber-700",
+                text: "text-red"
+            },
+            secondary: {
+                button: "bg-red-500",
+                text: "text-white"
+            }
+        },
+        sizes: {
+            small: "rounded-[100px] font-sm",
+            medium: "rounded-[14px] font-base",
+            large: "rounded-[16px] font-base min-h-[56px]"
+        }
+    };
 
-export default Button
+   return (
+    <div className={
+        defaultClass + " " + classes.sizes[size] + " " + 
+        classes.colors[color].button
+    }>
+        <div className= {classes.colors[color].text}>{title}</div>
+    </div>
+   );
+};

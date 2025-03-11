@@ -15,6 +15,9 @@ export default class Header extends Component{
                     <div className='flex flex-col'>
                         <a href="/blog">Blog</a>
                     </div>
+                    <div className='flex flex-col'>
+                        <a href="/counter">Counter</a>
+                    </div>
                 </div>
             </div>
         )

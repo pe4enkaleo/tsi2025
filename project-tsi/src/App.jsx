@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Blog from './pages/Blog'
+import Counter from './pages/Counter'
 
 function App() {
   return (
@@ -18,8 +19,10 @@ function App() {
           <Route path="/" element={<Home/>}></Route>
           <Route path="/about" element={<About/>}></Route>
           <Route path="/blog" element={<Blog/>}></Route>
+          <Route path="/counter" element={<Counter/>}></Route>
         </Routes>
       </BrowserRouter>
+      
       <Footer />
     </>
   );
